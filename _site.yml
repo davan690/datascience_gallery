@@ -1,0 +1,11 @@
+name: "UO Psychology Data Science Gallery"
+output_dir: "."
+navbar:
+  title: "Data Science Gallery"
+  left:
+    - text: "Tutorials"
+      href: index.html
+    - text: "psychduck"
+      href: psychduck.html
+    - text: "Syllabus"
+      href: syllabus.html

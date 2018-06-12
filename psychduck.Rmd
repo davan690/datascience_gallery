@@ -1,0 +1,14 @@
+---
+title: "psychduck package"
+---
+
+The "psychduck" package is a custom R package containing functions written by students in the class. As part of our package creation section, students were asked to build their own custom packages and host them on their own GitHub accounts. These packages contained custom functions written by each contributor that they would find useful in their own research. The psychduck package is the aggregated collection of these efforts. It is my hope that others might find some of these functions useful and my even want to contribute to the package itself. The repository is hosted [here](https://github.com/robchavez/psychduck).
+
+To install, you will need the "devtools" package installed before downloading from GitHub. **Requires R version 3.5 or higher.**
+
+```{r,warning=FALSE,message=FALSE, eval=FALSE}
+# Requires devtools package and R version 3.5 or higher
+install.packages("devtools")
+devtools::install_github("robchavez/psychduck")
+
+library(psychduck)

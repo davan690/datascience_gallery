@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Rob Chavez, PhD - Assistant Professor of Psychology" />
+
+
+<title>Syllabus: PSY 607 Data Science Methods for Psychology</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Data Science Gallery</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Tutorials</a>
+</li>
+<li>
+  <a href="psychduck.html">psychduck</a>
+</li>
+<li>
+  <a href="syllabus.html">Syllabus</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Syllabus: PSY 607 Data Science Methods for Psychology</h1>
+<h4 class="author"><em>Rob Chavez, PhD - Assistant Professor of Psychology</em></h4>
+<h4 class="date"><em>Spring 2018: Thursdays 11:30am – 1:20pm in Straub 257</em></h4>
+
+</div>
+
+
+<p><img src="syllabus_files/figure-html/unnamed-chunk-1-1.png" width="384" style="display: block; margin: auto;" /></p>
+<p>Welcome to our seminar! The goal of this course is to introduce you to concepts and workflows that are commonplace in “data science” more generally but are less formally discussed in Psychology.</p>
+<p>It is often noted that the bulk of a data scientist’s time (supposedly up to 80%) is devoted to simply getting data into a format where it can finally be analyzed, rather than performing any of the substantive analyses themselves. I’m sure many of you have received a dataset that was in a format that didn’t make it easy to analyze and forced you to struggle to deal with it before you could ask any questions of the data. The aim of this course is help refine your skills in these domains, such that you are ready to programmatically and reproducibly tackle any dataset that comes your way, regardless of how messy it is on arrival. It also my hope that this will help you design your studies to avoid many of these issues from outset. Additionally, we will cover topics that highlight different kinds of methods data scientists use to make sense of their data. As such, we will cover topics such as data structuring and programming, data wrangling, visualization, intro to machine learning methods, and more.</p>
+<p>Unlike more traditional seminars, this course will consist of a series of weekly ‘mini-hackathons’ in which students will rotate in leading small projects aimed at diving into a topic in these areas. Though the techniques taught in the class could be applied in many other computing languages (e.g. Python, Matlab), this course will be taught using R with RStudio. As such, this course should be well suited for students of all psychology sub-disciplines hoping to expand their understanding of R beyond basic statistical procedures to include the skills discussed above as well as more general coding and programming skills. The best way to learn these principles is to dive in deeply with hands on interactivity with practical tools you can employ in your own studies. Where possible, I will encourage people to work with real datasets to elucidate the underlying constructs. However, it should be made clear that this is not intended to be a statistics course and we will not be going into detail about topics more pertinent to a formal statistical modeling course.</p>
+<div id="assignments-and-grading" class="section level2">
+<h2>Assignments and Grading</h2>
+<p>You grade will be a weighted average of the following criteria:</p>
+<ul>
+<li>70% – Topic presentation and hackathon leader</li>
+<li>30% – Attendance, participation, and project submissions</li>
+</ul>
+<div id="topic-presentation-and-hackathon-leader" class="section level3">
+<h3>Topic presentation and hackathon leader</h3>
+<p>Your primary assignment for the course is to lead a hackathon project that highlights the topic of that week. This will involve working with a partner to come up with a small project that your classmates will work on during class and complete at home if necessary and give a short presentation about your topic.</p>
+<p>The hackathon projects should focus on highlighting various aspects of the weekly topic as much as possible and require a <em>moderate</em> amount of work to complete (not too much, not too little). You and your partner will also be expected to give a presentation at the beginning of class to give a short overview and tutorial about your topic, as well as set up what your hackathon project will be. These presentations should be no more than 25 minutes but no less than 10 in order to allow your classmates time to work on the hackathon project. You will be evaluated on effort and the quality of the project ideas, as well as the clarity of your presentation and helpfulness during the hackathon. I will also be asking you to give feedback on your partner’s contributions to ensure everyone is contributing to these efforts equally.</p>
+<p><strong><em>Note:</em></strong> You and your partner need to discuss with me the idea for your project by the end of the day on the Monday prior to your presentation. This is just to ensure that I think your project is on track and feasible so everything runs as smoothly as possible the day you present.</p>
+</div>
+<div id="attendance-participation-and-project-submissions" class="section level3">
+<h3>Attendance, participation, and project submissions</h3>
+<p>If you are not the hackathon leader that week, your assignment will be to participate in the hackathon for the weekly project. Additionally you will be required to submit this work on Canvas in the form of <strong><em>BOTH</em></strong> an <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a> document (.Rmd file) that that I can use to reproduce your results and its corresponding formatted HTML file that was ‘knit’ from RStudio. You will be evaluated on your completeness of the project and informative documentation of your code (but not on the ‘beauty’ or formatting of the code itself).</p>
+<p><strong><em>Note:</em></strong> You must submit your results to me by Tuesday night of the following week.</p>
+</div>
+</div>
+<div id="text-and-materials" class="section level2">
+<h2>Text and Materials</h2>
+<p>There is no official textbook for this course. However, there are several resources that people may find helpful when coming up with projects to present or trying to generate code for a problem. Here are some links to some that I have found useful over the years.</p>
+<div id="ebooks-free" class="section level4">
+<h4>eBooks (free!)</h4>
+<p><a href="http://r4ds.had.co.nz">R for Data Science</a><br />
+<a href="http://adv-r.had.co.nz">Advanced R</a><br />
+<a href="http://www-bcf.usc.edu/~gareth/ISL">An Introduction to Statistical Learning</a></p>
+</div>
+<div id="other-books-not-free" class="section level4">
+<h4>Other books (not free)</h4>
+<p><a href="https://www.amazon.com/Art-Programming-Statistical-Software-Design/dp/1593273843">The Art of R Programming</a><br />
+<a href="http://appliedpredictivemodeling.com">Applied Predictive Modeling</a></p>
+</div>
+<div id="helpful-online-resources" class="section level4">
+<h4>Helpful online resources</h4>
+<p><a href="https://www.rstudio.com/resources/cheatsheets">Cheat Sheets</a><br />
+<a href="http://www.cookbook-r.com">Cookbook for R</a><br />
+<a href="https://www.statmethods.net">Quick-R</a></p>
+</div>
+<div id="online-forums" class="section level4">
+<h4>Online forums</h4>
+<p><a href="https://stackoverflow.com">Stack Overflow</a><br />
+<a href="https://stats.stackexchange.com">Cross Validated</a></p>
+</div>
+</div>
+<div id="classroom-expectations" class="section level2">
+<h2>Classroom Expectations</h2>
+<p><em>Because of the hackathon style of the course, it is required that you bring your laptop and charger to every class.</em></p>
+<p>As always, you are expected to treat your peers, instructor, and everyone else with respect. Although you are expected to produce you own work, it is understandable some parts of your code may have originated elsewhere and that is fine. However, if there is any indication that you are simply copying and pasting bits and pieces of other’s work without an earnest effort to produce original work, it will be grounds for academic misconduct.</p>
+<div id="absences" class="section level3">
+<h3>Absences</h3>
+<p>If you are going to be absent for any reason, please notify me ASAP. You will still be responsible for submitting you hackathon project for that week.</p>
+</div>
+<div id="prohibited-discrimination-and-harassment-reporting" class="section level3">
+<h3>Prohibited Discrimination and Harassment Reporting</h3>
+<p>Any student who has experienced sexual assault, relationship violence, sex or gender-based bullying, stalking, and/or sexual harassment may seek resources and help at safe.uoregon.edu. To get help by phone, a student can also call either the UO’s 24-hour hotline at 541-346-7244 [SAFE], or the non-confidential Title IX Coordinator at 541-346-8136. From the SAFE website, students may also connect to Callisto, a confidential, third-party reporting site that is not a part of the university.</p>
+<p>Students experiencing any other form of prohibited discrimination or harassment can find information at respect.uoregon.edu or aaeo.uoregon.edu or contact the non-confidential AAEO office at 541-346-3123 or the Dean of Students Office at 541-346-3216 for help. As UO policy has different reporting requirements based on the nature of the reported harassment or discrimination, additional information about reporting requirements for discrimination or harassment unrelated to sexual assault, relationship violence, sex or gender based bullying, stalking, and/or sexual harassment is available at <a href="http://" class="uri">http://</a> <a href="http://aaeo.uoregon.edu/content/discrimination-harassment" class="uri">http://aaeo.uoregon.edu/content/discrimination-harassment</a>.</p>
+<p>Specific details about confidentiality of information and reporting obligations of employees can be found at <a href="https://titleix.uoregon.edu" class="uri">https://titleix.uoregon.edu</a>.</p>
+<p>Mandatory Reporting of Child Abuse: UO employees, including faculty, staff, and GEs, are mandatory reporters of child abuse. This statement is to advise you that that your disclosure of information about child abuse to a UO employee may trigger the UO employee’s duty to report that information to the designated authorities. Please refer to the following links for detailed information about mandatory reporting: <a href="https://hr.uoregon.edu/policies-leaves/general-information/mandatory-reporting-child-abuse-and-neglect/presidents-message" class="uri">https://hr.uoregon.edu/policies-leaves/general-information/mandatory-reporting-child-abuse-and-neglect/presidents-message</a></p>
+</div>
+</div>
+<div id="changes-to-the-syllabus" class="section level2">
+<h2>Changes to the Syllabus</h2>
+<p>I reserve the right to change or waive any part of this syllabus at any time.</p>
+</div>
+<div id="schedule" class="section level2">
+<h2>Schedule</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Week/Date</th>
+<th>Topic</th>
+<th>Presenters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 – April 5</td>
+<td>Intro and logistics</td>
+<td>Rob</td>
+</tr>
+<tr class="even">
+<td>2 – April 12</td>
+<td>General programming in R</td>
+<td>Krista &amp; Brendan</td>
+</tr>
+<tr class="odd">
+<td>3 – April 19</td>
+<td>Data munging/wrangling</td>
+<td>Bradley &amp; Sarah</td>
+</tr>
+<tr class="even">
+<td>4 – April 26</td>
+<td>Data visualization</td>
+<td>Pablo &amp; Adam</td>
+</tr>
+<tr class="odd">
+<td>5 – May 3</td>
+<td>Text processing</td>
+<td>Stephanie &amp; Pooya</td>
+</tr>
+<tr class="even">
+<td>6 – May 10</td>
+<td>Web scraping</td>
+<td>Stephan &amp; Taylor</td>
+</tr>
+<tr class="odd">
+<td>7 – May 17</td>
+<td>Machine Learning</td>
+<td>Sara &amp; Stefania</td>
+</tr>
+<tr class="even">
+<td>8 – May 24</td>
+<td>Network analysis</td>
+<td>Cory &amp; Heather</td>
+</tr>
+<tr class="odd">
+<td>9 – May 31</td>
+<td>Package creation</td>
+<td>Lea &amp; Ashley</td>
+</tr>
+<tr class="even">
+<td>10 – June 6</td>
+<td>Advanced Programming</td>
+<td>Sam &amp; Dani</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
